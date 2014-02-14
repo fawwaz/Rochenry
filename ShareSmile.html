@@ -7,6 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 	<!-- Custom CSS -->
 	<style type="text/css">
 	/* Sticky footer styles
@@ -48,6 +50,10 @@
 	code {
 	  font-size: 80%;
 	}
+	#ambil_foto{
+		
+		margin-top: 200px;
+	}
 
 	</style>
 
@@ -68,8 +74,8 @@
 		</div>
 		<div class="collapse navbar-collapse">
 		<ul class="nav navbar-nav">
-			<li><a href="#about">About</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a href="#about">Tentang</a></li>
+			<li><a href="#contact">Bagikan Senyumu!</a></li>
 		</ul>
 		</div><!--/.nav-collapse -->
 	</div>
@@ -79,11 +85,14 @@
 
 <!-- Main Content -->
 <div class="container">
-	<div class="page-header">
-		<h1>Sticky footer with fixed navbar</h1>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<div id="ambil_foto" class="well text-center">
+				<i class="fa fa-camera-retro fa-5x"></i><br><br>
+				<a href="#" class="btn btn-lg btn-info"> #ShareSmile</a>
+			</div>
+		</div>
 	</div>
-	<p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.</p>
-	<p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
 </div>
 
 <div id="footer">

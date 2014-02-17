@@ -106,18 +106,17 @@
                 $('#say-cheese-snapshot').prepend(img);
             });
             img.src = snapshot.toDataURL('image/png');
-                        
-            var imageUploaded = img.src.replace('data:image/png;base64,', '');
+                                    
             $.ajax({
                 type: 'POST',
-                url: 'index.php',
-                data: '{ "imageData" : "' + imageUploaded + '" }',
+                url: 'convertb64.php',
+                data: JSON.stringify({ "imageData": img.src }),
                 contentType: 'application/json; charset=utf-8',
-                dataType: 'json',
                 success: function (msg) {
                     alert('Image sent!');
                 }
-            });            
+            });
+            
 //            sayCheese.stop();
         });
 

@@ -24,13 +24,26 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oau
 
 /* bikin tweet */
 
-$params = array(    
-    'media[]' => "@{$_FILES['image']['tmp_name']};type={$_FILES['image']['type']};filename={$_FILES['image']['name']}",
-    'status' => $_POST['status']
+//$params = array(    
+//    'media[]' => "@{$_FILES['image']['tmp_name']};type={$_FILES['image']['type']};filename={$_FILES['image']['name']}",
+//    'status' => $_POST['status']
+//);
+
+
+$imgType = $_SESSION['imgType'];
+$imgName = $_SESSION['imgName'];
+$attachment = './uploads/'.$imgName;
+
+$params = array(
+    'media[]' => "@{$attachment};type={$imgType};filename={$imgName}",
+    'status' => "tes"
 );
 
+//$params = array(    
+//    'status' => "tes"
+//);
+
 $response = $connection->post('statuses/update_with_media', $params, true);
-//var_dump($response);
 
 /* Some example calls */
 //$connection->get('users/show', array('screen_name' => 'abraham'));

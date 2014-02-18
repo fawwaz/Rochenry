@@ -7,7 +7,7 @@ require_once('config.php');
 
 /* Build TwitterOAuth object with client credentials. */
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
- 
+//var_dump($connection);
 /* Get temporary credentials. */
 $request_token = $connection->getRequestToken(OAUTH_CALLBACK);
 
